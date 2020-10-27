@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
+import Main from './components/Main';
+import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { ConfigureStore } from './redux/configureStore';
+import { balance } from './shared/BankBalance';
 
-class App extends Component {
+export default class App extends Component {
   constructor(props) {
     super(props);
 
   }
 
   render() {
-    const store = ConfigureStore();
+    const store = createStore(balance);
 
     return (
       <Provider store={store}>

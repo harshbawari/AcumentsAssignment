@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import BankBalance from './BankBalance';
 
-class Main extends Component {
+export default class Main extends Component {
 
     constructor(props) {
         super(props);
@@ -11,7 +12,7 @@ class Main extends Component {
         return (
             <div>
                 <BankBalance />
-                <ShowButtons />
+
             </div>
         );
     }
